@@ -1,5 +1,6 @@
 package com.example.rqchallenge.employees;
 
+import com.example.rqchallenge.employees.model.Employee;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,7 +21,7 @@ public interface IEmployeeController {
     ResponseEntity<Employee> getEmployeeById(@PathVariable String id);
 
     @GetMapping("/highestSalary")
-    ResponseEntity<Integer> getHighestSalaryOfEmployees();
+    ResponseEntity<Long> getHighestSalaryOfEmployees();
 
     @GetMapping("/topTenHighestEarningEmployeeNames")
     ResponseEntity<List<String>> getTopTenHighestEarningEmployeeNames();
